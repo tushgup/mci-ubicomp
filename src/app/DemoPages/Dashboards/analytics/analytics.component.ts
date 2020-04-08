@@ -25,7 +25,7 @@ export class AnalyticsComponent implements OnInit {
       label: 'Weight',
       data: [51, 55, 56, 53, 59, 50, 52, 61, 62, 58],
       datalabels: {
-        display: false,
+        display: true,
       },
 
     }

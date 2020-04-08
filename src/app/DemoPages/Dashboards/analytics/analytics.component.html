@@ -1,9 +1,9 @@
-<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+<!-- <app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title> -->
 
 <div class="row">
-  <div class="col-sm-12 col-lg-7">
+  <div class="col-sm-12 col-lg-8">
     <div class="mb-3 card">
-      <div class="card-header-tab card-header" style="background: rgba(219, 87, 26, 0.12);">
+      <div class="card-header-tab card-header" style="background: rgba(219, 87, 26, 0.12); border-radius: 20px 0 0 0 !important;">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #DB571A;
         ">
           <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
@@ -15,23 +15,12 @@
           <div class="widget-chart widget-chart2 text-left p-0">
             <div class="widget-chat-wrapper-outer">
               <div class="widget-chart-content widget-chart-content-lg pb-0">
-                <div class="widget-chart-flex">
-                  <div class="widget-title"><h5>You spent the most time in your bedroom</h5></div>
-                </div>
-                <div class="widget-numbers">
-                  <div class="widget-chart-flex">
-                    <div>
-                      <span class="text-warning">65 kgs</span>
-                    </div>
-                    <div class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
-                      <span class="opacity-5 text-muted pl-2 pr-1">10%</span>
-                      decrease
-                    </div>
-                  </div>
+                <div class="widget-chart-flex mb-3">
+                  <div class="widget-title"><h4>You spent the most time in your <span style="font-weight: 800; color: #DB571A">bedroom</span></h4></div>
                 </div>
               </div>
               <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                <div class="d-block">
+                <!-- <div class="d-block">
                   <canvas baseChart
                           class="chart"
                           [datasets]="datasets"
@@ -39,7 +28,8 @@
                           [colors]="lineChartColors"
                           [options]="options"
                           [chartType]="'line'"></canvas>
-                </div>
+                </div> -->
+                <app-bar-chart></app-bar-chart>
               </div>
             </div>
           </div>
@@ -47,9 +37,9 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-lg-5">
+  <div class="col-sm-12 col-lg-4">
     <div class="mb-3 card">
-      <div class="card-header-tab card-header" style="background: #C6DEF4;">
+      <div class="card-header-tab card-header" style="background: #C6DEF4; border-radius: 20px 0 0 0 !important;">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #3274B1;
         ">
           <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
@@ -60,6 +50,11 @@
         <div class="p-1 slick-slider-sm mx-auto">
           <div class="widget-chart widget-chart2 text-left p-0">
             <div class="widget-chat-wrapper-outer">
+              <div class="widget-chart-content widget-chart-content-lg pb-0">
+                <div class="widget-chart-flex mb-3">
+                  <div class="widget-title"><h4>You forgot your <span style="font-weight: 800; color: #3274B1">afternoon</span> pills</h4></div>
+                </div>
+              </div>
               <div class="widget-chart-wrapper he-auto opacity-10 m-0">
                 <div class="d-block">
                   <app-radar-chart></app-radar-chart>
@@ -71,9 +66,9 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-lg-5">
+  <div class="col-sm-12 col-lg-6">
     <div class="mb-3 card">
-      <div class="card-header-tab card-header" style="background: #DDF0C8;">
+      <div class="card-header-tab card-header" style="background: #DDF0C8; border-radius: 20px 0 0 0 !important;">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #458925;
         ">
           <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
@@ -84,9 +79,14 @@
         <div class="p-1 slick-slider-sm mx-auto">
           <div class="widget-chart widget-chart2 text-left p-0">
             <div class="widget-chat-wrapper-outer">
+              <div class="widget-chart-content widget-chart-content-lg pb-0">
+                <div class="widget-chart-flex mb-3 mr-4">
+                  <div class="widget-title"><h4>You were asleep for <span style="font-weight: 800; color: #458925">6 hours</span> and awake for <span style="font-weight: 800; color: #458925">2 hours</span> at night</h4></div>
+                </div>
+              </div>
               <div class="widget-chart-wrapper he-auto opacity-10 m-0">
                 <div class="d-block">
-                  <app-radar-chart></app-radar-chart>
+                  <app-polar-area-chart></app-polar-area-chart>
                 </div>
               </div>
             </div>
@@ -95,9 +95,9 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-lg-7">
+  <div class="col-sm-12 col-lg-6">
     <div class="mb-3 card">
-      <div class="card-header-tab card-header" style="background: #FFE8F0;">
+      <div class="card-header-tab card-header" style="background: #FFE8F0; border-radius: 20px 0 0 0 !important;">
         <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #D02B67;
         ">
           <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
@@ -109,19 +109,8 @@
           <div class="widget-chart widget-chart2 text-left p-0">
             <div class="widget-chat-wrapper-outer">
               <div class="widget-chart-content widget-chart-content-lg pb-0">
-                <div class="widget-chart-flex">
-                  <div class="widget-title opacity-5 text-muted text-uppercase">Change in weight</div>
-                </div>
-                <div class="widget-numbers">
-                  <div class="widget-chart-flex">
-                    <div>
-                      <span class="text-warning">65 kgs</span>
-                    </div>
-                    <div class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
-                      <span class="opacity-5 text-muted pl-2 pr-1">10%</span>
-                      decrease
-                    </div>
-                  </div>
+                <div class="widget-chart-flex mb-3">
+                  <div class="widget-title"><h4>You've <span style="font-weight: 800; color: #D02B67">maintained</span> your target weight</h4></div>
                 </div>
               </div>
               <div class="widget-chart-wrapper he-auto opacity-10 m-0">
@@ -134,6 +123,7 @@
                           [options]="options"
                           [chartType]="'line'"></canvas>
                 </div>
+                <!-- <app-line-chart></app-line-chart> -->
               </div>
             </div>
           </div>

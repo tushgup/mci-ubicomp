@@ -12,21 +12,27 @@ export class BarChartComponent implements OnInit {
     responsive: true,
     // We use these empty structures as placeholders for dynamic theming.
     scales: {xAxes: [{}], yAxes: [{}]},
+    legend: {
+      display: false
+    },
     plugins: {
       datalabels: {
         anchor: 'end',
         align: 'end',
       }
-    }
+    },
   };
-  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels: Label[] = ['Master Bedroom', 'Living Room', 'Master Bath', 'Kitchen', 'Dining', 'Office', 'Bath'];
   public barChartType: ChartType = 'bar';
-  public barChartLegend = true;
+  public barChartLegend = false;
   public barChartPlugins = [pluginDataLabels];
 
   public barChartData: ChartDataSets[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+    // tslint:disable-next-line:max-line-length
+    {
+      data: [6, 1, 3, 1, 1, 1, 0],
+      // tslint:disable-next-line:max-line-length
+      backgroundColor: ['rgba(219, 87, 26, 0.78)', 'rgba(219, 87, 26, 0.55)', 'rgba(219, 87, 26, 0.55)', 'rgba(219, 87, 26, 0.55)', 'rgba(219, 87, 26, 0.55)', 'rgba(219, 87, 26, 0.55)']}
   ];
 
   constructor() {
