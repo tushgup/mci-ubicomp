@@ -6,6 +6,10 @@ button,
   outline: none !important;
 }
 
+*, html, body {
+  font-family: 'Helvetica Neue';
+}
+
 .app-container {
   display: flex;
   min-height: 100vh;

@@ -1,277 +1,107 @@
 <app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
 
-<div class="mb-3 card">
-  <div class="card-header-tab card-header">
-    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-      <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
-      Your Day At A Gance
-    </div>
-  </div>
-  <div class="no-gutters row">
-    <div class="col-sm-6 col-md-4 col-xl-4">
-      <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
-        <div class="icon-wrapper rounded-circle">
-          <div class="icon-wrapper-bg opacity-10 bg-warning"></div>
-          <i class="pe-7s-alarm text-white opacity-8"></i></div>
-        <div class="widget-chart-content">
-          <div class="widget-subheading">Sleep (avg.)</div>
-          <div class="widget-numbers">7.5 hours</div>
-          <div class="widget-description opacity-8 text-focus">
-            <div class="d-inline text-danger pr-1">
-              <fa name="angle-down"></fa>
-              <span class="pl-1">15.1%</span>
-            </div>
-            compared to last week
-          </div>
-        </div>
-      </div>
-      <div class="divider m-0 d-md-none d-sm-block"></div>
-    </div>
-    <div class="col-sm-6 col-md-4 col-xl-4">
-      <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
-        <div class="icon-wrapper rounded-circle">
-          <div class="icon-wrapper-bg opacity-9 bg-danger"></div>
-          <i class="pe-7s-graph1 text-white"></i></div>
-        <div class="widget-chart-content">
-          <div class="widget-subheading">Weight</div>
-          <div class="widget-numbers"><span>65 kgs</span></div>
-          <div class="widget-description opacity-8 text-focus">
-            Change:
-            <span class="text-info pl-1">
-                <fa name="angle-down"></fa>
-                <span class="pl-1">10%</span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="divider m-0 d-md-none d-sm-block"></div>
-    </div>
-    <div class="col-sm-12 col-md-4 col-xl-4">
-      <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
-        <div class="icon-wrapper rounded-circle">
-          <div class="icon-wrapper-bg opacity-9 bg-success"></div>
-          <i class="pe-7s-check text-white"></i></div>
-        <div class="widget-chart-content">
-          <div class="widget-subheading">Medicines</div>
-          <div class="widget-numbers text-success"><span>3/3 taken</span></div>
-          <!-- <div class="widget-description text-focus">
-            Increased by
-            <span class="text-warning pl-1">
-                <fa name="angle-up"></fa>
-                <span class="pl-1">7.35%</span>
-            </span>
-          </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center d-block p-3 card-footer">
-    <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-primary btn-lg">
-                  <span class="mr-2 opacity-7">
-                      <i class="icon icon-anim-pulse ion-ios-analytics-outline"></i>
-                  </span>
-      <span class="mr-1">View Complete Report</span>
-    </button>
-  </div>
-</div>
-<!-- <div class="main-card mb-3 card">
-  <div class="card-header">
-    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">Company Agents Status</div>
-  </div>
-  <div class="table-responsive">
-    <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
-      <thead>
-      <tr>
-        <th class="text-center">#</th>
-        <th class="text-center">Avatar</th>
-        <th class="text-center">Name</th>
-        <th class="text-center">Company</th>
-        <th class="text-center">Status</th>
-        <th class="text-center">Due Date</th>
-        <th class="text-center">Target Achievement</th>
-        <th class="text-center">Actions</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td class="text-center text-muted" style="width: 80px;">#54</td>
-        <td class="text-center" style="width: 80px;">
-          <img width="40" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt="">
-        </td>
-        <td class="text-center"><a [routerLink]="">Juan C. Cargill</a></td>
-        <td class="text-center"><a [routerLink]="">Micro Electronics</a></td>
-        <td class="text-center">
-          <div class="badge badge-pill badge-danger">Canceled</div>
-        </td>
-        <td class="text-center">
-                                        <span class="pr-2 opacity-6">
-                                            <i class="fa fa-business-time"></i>
-                                        </span>
-          12 Dec
-        </td>
-        <td class="text-center" style="width: 200px;">
-          <div class="widget-content p-0">
-            <div class="widget-content-outer">
-              <div class="widget-content-wrapper">
-                <div class="widget-content-left pr-2">
-                  <div class="widget-numbers fsize-1 text-danger">71%</div>
-                </div>
-                <div class="widget-content-right w-100">
-                  <div class="progress-bar-xs progress">
-                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="71" aria-valuemin="0"
-                         aria-valuemax="100" style="width: 71%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td class="text-center">
-          <div role="group" class="btn-group-sm btn-group">
-            <button class="btn-shadow btn btn-primary">Hire</button>
-            <button class="btn-shadow btn btn-primary">Fire</button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center text-muted" style="width: 80px;">#55</td>
-        <td class="text-center" style="width: 80px;">
-          <img width="40" class="rounded-circle" src="./assets/images/avatars/2.jpg" alt="">
-        </td>
-        <td class="text-center"><a [routerLink]="">Johnathan Phelan</a></td>
-        <td class="text-center"><a [routerLink]="">Hatchworks</a></td>
-        <td class="text-center">
-          <div class="badge badge-pill badge-info">On Hold</div>
-        </td>
-        <td class="text-center">
-                                        <span class="pr-2 opacity-6">
-                                            <i class="fa fa-business-time"></i>
-                                        </span>
-          12 Dec
-        </td>
-        <td class="text-center" style="width: 200px;">
-          <div class="widget-content p-0">
-            <div class="widget-content-outer">
-              <div class="widget-content-wrapper">
-                <div class="widget-content-left pr-2">
-                  <div class="widget-numbers fsize-1 text-warning">54%</div>
-                </div>
-                <div class="widget-content-right w-100">
-                  <div class="progress-bar-xs progress">
-                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="54" aria-valuemin="0"
-                         aria-valuemax="100" style="width: 54%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td class="text-center">
-          <div role="group" class="btn-group-sm btn-group">
-            <button class="btn-shadow btn btn-primary">Hire</button>
-            <button class="btn-shadow btn btn-primary">Fire</button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center text-muted" style="width: 80px;">#56</td>
-        <td class="text-center" style="width: 80px;">
-          <img width="40" class="rounded-circle" src="./assets/images/avatars/3.jpg" alt="">
-        </td>
-        <td class="text-center"><a [routerLink]="">Darrell Lowe</a></td>
-        <td class="text-center"><a [routerLink]="">Riddle Electronics</a></td>
-        <td class="text-center">
-          <div class="badge badge-pill badge-warning">In Progress</div>
-        </td>
-        <td class="text-center">
-                                        <span class="pr-2 opacity-6">
-                                            <i class="fa fa-business-time"></i>
-                                        </span>
-          12 Dec
-        </td>
-        <td class="text-center" style="width: 200px;">
-          <div class="widget-content p-0">
-            <div class="widget-content-outer">
-              <div class="widget-content-wrapper">
-                <div class="widget-content-left pr-2">
-                  <div class="widget-numbers fsize-1 text-success">97%</div>
-                </div>
-                <div class="widget-content-right w-100">
-                  <div class="progress-bar-xs progress">
-                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="97" aria-valuemin="0"
-                         aria-valuemax="100" style="width: 97%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td class="text-center">
-          <div role="group" class="btn-group-sm btn-group">
-            <button class="btn-shadow btn btn-primary">Hire</button>
-            <button class="btn-shadow btn btn-primary">Fire</button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center text-muted" style="width: 80px;">#56</td>
-        <td class="text-center" style="width: 80px;">
-          <img width="40" class="rounded-circle" src="./assets/images/avatars/4.jpg" alt="">
-        </td>
-        <td class="text-center"><a [routerLink]="">George T. Cottrell</a></td>
-        <td class="text-center"><a [routerLink]="">Pixelcloud</a></td>
-        <td class="text-center">
-          <div class="badge badge-pill badge-success">Completed</div>
-        </td>
-        <td class="text-center">
-                                        <span class="pr-2 opacity-6">
-                                            <i class="fa fa-business-time"></i>
-                                        </span>
-          12 Dec
-        </td>
-        <td class="text-center" style="width: 200px;">
-          <div class="widget-content p-0">
-            <div class="widget-content-outer">
-              <div class="widget-content-wrapper">
-                <div class="widget-content-left pr-2">
-                  <div class="widget-numbers fsize-1 text-info">88%</div>
-                </div>
-                <div class="widget-content-right w-100">
-                  <div class="progress-bar-xs progress">
-                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="88" aria-valuemin="0"
-                         aria-valuemax="100" style="width: 88%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td class="text-center">
-          <div role="group" class="btn-group-sm btn-group">
-            <button class="btn-shadow btn btn-primary">Hire</button>
-            <button class="btn-shadow btn btn-primary">Fire</button>
-          </div>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="d-block p-4 text-center card-footer">
-    <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-dark btn-lg">
-      <span class="mr-2 opacity-7">
-          <i class="fa fa-cog fa-spin"></i>
-      </span>
-      <span class="mr-1">View Complete Report</span>
-    </button>
-  </div>
-</div> -->
 <div class="row">
-  <div class="col-sm-12 col-lg-6">
+  <div class="col-sm-12 col-lg-7">
     <div class="mb-3 card">
-      <div class="card-header-tab card-header">
-        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+      <div class="card-header-tab card-header" style="background: rgba(219, 87, 26, 0.12);">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #DB571A;
+        ">
           <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
-          Weight Tracking
+          Activity
+        </div>
+      </div>
+      <div class="p-0 card-body">
+        <div class="p-1 slick-slider-sm mx-auto">
+          <div class="widget-chart widget-chart2 text-left p-0">
+            <div class="widget-chat-wrapper-outer">
+              <div class="widget-chart-content widget-chart-content-lg pb-0">
+                <div class="widget-chart-flex">
+                  <div class="widget-title"><h5>You spent the most time in your bedroom</h5></div>
+                </div>
+                <div class="widget-numbers">
+                  <div class="widget-chart-flex">
+                    <div>
+                      <span class="text-warning">65 kgs</span>
+                    </div>
+                    <div class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
+                      <span class="opacity-5 text-muted pl-2 pr-1">10%</span>
+                      decrease
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget-chart-wrapper he-auto opacity-10 m-0">
+                <div class="d-block">
+                  <canvas baseChart
+                          class="chart"
+                          [datasets]="datasets"
+                          [labels]="labels"
+                          [colors]="lineChartColors"
+                          [options]="options"
+                          [chartType]="'line'"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-lg-5">
+    <div class="mb-3 card">
+      <div class="card-header-tab card-header" style="background: #C6DEF4;">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #3274B1;
+        ">
+          <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
+          Medicines
+        </div>
+      </div>
+      <div class="p-0 card-body">
+        <div class="p-1 slick-slider-sm mx-auto">
+          <div class="widget-chart widget-chart2 text-left p-0">
+            <div class="widget-chat-wrapper-outer">
+              <div class="widget-chart-wrapper he-auto opacity-10 m-0">
+                <div class="d-block">
+                  <app-radar-chart></app-radar-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-lg-5">
+    <div class="mb-3 card">
+      <div class="card-header-tab card-header" style="background: #DDF0C8;">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #458925;
+        ">
+          <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
+          Sleep
+        </div>
+      </div>
+      <div class="p-0 card-body">
+        <div class="p-1 slick-slider-sm mx-auto">
+          <div class="widget-chart widget-chart2 text-left p-0">
+            <div class="widget-chat-wrapper-outer">
+              <div class="widget-chart-wrapper he-auto opacity-10 m-0">
+                <div class="d-block">
+                  <app-radar-chart></app-radar-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-lg-7">
+    <div class="mb-3 card">
+      <div class="card-header-tab card-header" style="background: #FFE8F0;">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal" style="color: #D02B67;
+        ">
+          <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
+          Weight
         </div>
       </div>
       <div class="p-0 card-body">
@@ -311,52 +141,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-lg-6">
-    <div class="mb-3 card">
-      <div class="card-header-tab card-header">
-        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-          <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
-          Activity Tracking
-        </div>
-      </div>
-      <div class="p-0 card-body">
-        <div class="p-1 slick-slider-sm mx-auto">
-          <div class="widget-chart widget-chart2 text-left p-0">
-            <div class="widget-chat-wrapper-outer">
-              <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                <div class="d-block">
-                  <app-radar-chart></app-radar-chart>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-12 col-lg-6">
-    <div class="mb-3 card">
-      <div class="card-header-tab card-header">
-        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-          <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
-          Sleep Tracking
-        </div>
-      </div>
-      <div class="p-0 card-body">
-        <div class="p-1 slick-slider-sm mx-auto">
-          <div class="widget-chart widget-chart2 text-left p-0">
-            <div class="widget-chat-wrapper-outer">
-              <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                <div class="d-block">
-                  <app-pie-chart></app-pie-chart>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- <div class="col-sm-12 col-lg-6">
     <div class="card-hover-shadow-2x mb-3 card">

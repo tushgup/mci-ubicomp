@@ -42,21 +42,57 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
   box-shadow: $sidebar-box-shadow;
   flex-direction: column;
   transition: all .3s ease;
+  border-top-right-radius:30px;
+  background-color: white;
 
   .app-header__logo {
+    flex-direction: column;
     padding: 0 $layout-spacer-x;
-    height: $app-header-height;
+    // height: $app-header-height;
     width: $app-sidebar-width;
     display: flex;
-    align-items: center;
+    // align-items: center;
     transition: width .2s;
-    flex-shrink: 0;
+    // flex-shrink: 0;
+    padding: 24px;
+    background-image: url('src/assets/images/sidebar/grass.png') !important;
+    color: white !important;
   }
 
   .app-sidebar-content {
+    padding: 24px;
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     width: 100%;
+
+    .sidebarBlock {
+      margin-top: 16px;
+    }
+
+    .icon {
+      margin: 0 8px 0 8px;
+    }
+
+    .dailyTrendBox {
+      margin: 16px 0 16px 0;
+      display: flex;
+      flex-direction: row;
+      height: 75px;
+      padding: 10px;
+      width: $app-sidebar-width - 50;
+      border-radius: 20px 5px 20px 5px;
+      background: rgba(190, 190, 190, 0.13);
+
+      img {
+        margin-left: 8px;
+      }
+      
+      p {
+        margin-bottom: 0;
+        margin-left: 16px;
+      }
+    }
 
     .app-sidebar-scroll {
       width: 100%;

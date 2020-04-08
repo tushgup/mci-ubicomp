@@ -2,7 +2,7 @@
 
 // Variables
 
-$app-container-bg: #f1f4f6;
+$app-container-bg: #F7F9FA;
 $app-sidebar-bg: #ffffff;
 $app-header-bg: #fafbfc;
 $app-header-logo-bg: rgba(255, 255, 255, .9);
@@ -35,4 +35,10 @@ $app-header-logo-bg: rgba(255, 255, 255, .9);
     background: $app-header-bg;
   }
 
+}
+
+.card {
+  background: #FCFCFC;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35), 0px 2px 2px rgba(0, 0, 0, 0.04);
+  border-radius: 20px 5px 20px 5px;
 }
