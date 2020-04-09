@@ -21,6 +21,7 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {PERFECT_SCROLLBAR_CONFIG} from 'ngx-perfect-scrollbar';
 import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
 import {ChartsModule} from 'ng2-charts';
+import {NgApexchartsModule} from 'ng-apexcharts';
 
 // LAYOUT
 
@@ -212,7 +213,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HttpClientModule,
 
     // Charts
-
+    NgApexchartsModule,
     ChartsModule,
   ],
   providers: [

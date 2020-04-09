@@ -55,9 +55,20 @@
                   <div class="widget-title"><h4>You forgot your <span style="font-weight: 800; color: #3274B1">afternoon</span> pills</h4></div>
                 </div>
               </div>
-              <div class="widget-chart-wrapper he-auto opacity-10 m-0">
+              <div class="widget-chart-wrapper he-auto opacity-10 m-0 mt-2 mb-7">
                 <div class="d-block">
-                  <app-radar-chart></app-radar-chart>
+                  <div style="display: flex; flex-direction: row; justify-content: center;" class="pt-2 pb-2">
+                    <h6 style="margin-bottom: 0; align-self: center;">Morning</h6>
+                    <img src="assets/images/icons/GreenTick.svg" class="ml-4" />
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content: center;" class="pt-2 pb-2">
+                    <h6 style="margin-bottom: 0; align-self: center;">Afternoon</h6>
+                    <img src="assets/images/icons/RedCross.svg" class="ml-4" />
+                  </div>
+                  <div style="display: flex; flex-direction: row; justify-content: center;" class="pt-2 pb-2">
+                    <h6 style="margin-bottom: 0; align-self: center;">Evening</h6>
+                    <img src="assets/images/icons/GreenTick.svg" class="ml-4" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,7 +97,7 @@
               </div>
               <div class="widget-chart-wrapper he-auto opacity-10 m-0">
                 <div class="d-block">
-                  <app-polar-area-chart></app-polar-area-chart>
+                  <app-line-chart></app-line-chart>
                 </div>
               </div>
             </div>
@@ -115,15 +126,7 @@
               </div>
               <div class="widget-chart-wrapper he-auto opacity-10 m-0">
                 <div class="d-block">
-                  <canvas baseChart
-                          class="chart"
-                          [datasets]="datasets"
-                          [labels]="labels"
-                          [colors]="lineChartColors"
-                          [options]="options"
-                          [chartType]="'line'"></canvas>
-                </div>
-                <!-- <app-line-chart></app-line-chart> -->
+                <app-dynamic-chart></app-dynamic-chart>
               </div>
             </div>
           </div>

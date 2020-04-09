@@ -1,139 +1,86 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js';
-import { Color, BaseChartDirective, Label } from 'ng2-charts';
-import * as pluginAnnotations from 'chartjs-plugin-annotation';
+import { Component, ViewChild } from '@angular/core';
 
+import {
+  ChartComponent,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexXAxis,
+  ApexDataLabels,
+  ApexTooltip,
+  ApexStroke
+} from 'ng-apexcharts';
+
+interface ChartOptions {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  stroke: ApexStroke;
+  tooltip: ApexTooltip;
+  dataLabels: ApexDataLabels;
+}
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html'
 })
-export class LineChartComponent implements OnInit {
-  public lineChartData: ChartDataSets[] = [
-    { data: [146, 148, 146, 148, 152, 143, 146], label: 'Current Weight', backgroundColor: '#D02B67'},
-    { data: [147, 147, 147, 147, 147, 147, 147], label: 'Target Weight', backgroundColor: '#3274B1' },
-    // { data: [180, 480, 770, 90, 1000, 270, 400], label: 'Series C', yAxisID: 'y-axis-1' }
-  ];
-  public lineChartLabels: Label[] = ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
-  public lineChartOptions: (ChartOptions) = {
-    responsive: true,
-    scales: {
-      // We use this empty structure as a placeholder for dynamic theming.
-      xAxes: [{}],
-      yAxes: [
+export class LineChartComponent {
+  @ViewChild('chart') chart: ChartComponent;
+  public chartOptions: Partial<ChartOptions>;
+
+  constructor() {
+    this.chartOptions = {
+      series: [
         {
-          id: 'y-axis-0',
-          position: 'left',
+          name: 'Sleep',
+          data: [1, 1, 1, 1, 0, 1, 0]
         },
-        // {
-        //   id: 'y-axis-1',
-        //   position: 'right',
-        //   gridLines: {
-        //     color: 'rgba(255,0,0,0.3)',
-        //   },
-        //   ticks: {
-        //     fontColor: 'red',
-        //   }
-        // }
-      ]
-    },
-    // annotation: {
-    //   annotations: [
-    //     {
-    //       type: 'line',
-    //       mode: 'vertical',
-    //       scaleID: 'x-axis-0',
-    //       value: 'March',
-    //       borderColor: 'orange',
-    //       borderWidth: 2,
-    //       label: {
-    //         enabled: true,
-    //         fontColor: 'orange',
-    //         content: 'LineAnno'
-    //       }
-    //     },
-    //   ],
-    // },
-  };
-  public lineChartColors: Color[] = [
-    // { // grey
-    //   backgroundColor: 'rgba(148,159,177,0.2)',
-    //   borderColor: 'rgba(148,159,177,1)',
-    //   pointBackgroundColor: 'rgba(148,159,177,1)',
-    //   pointBorderColor: '#fff',
-    //   pointHoverBackgroundColor: '#fff',
-    //   pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    // },
-    // { // dark grey
-    //   backgroundColor: 'rgba(77,83,96,0.2)',
-    //   borderColor: 'rgba(77,83,96,1)',
-    //   pointBackgroundColor: 'rgba(77,83,96,1)',
-    //   pointBorderColor: '#fff',
-    //   pointHoverBackgroundColor: '#fff',
-    //   pointHoverBorderColor: 'rgba(77,83,96,1)'
-    // },
-    { // red
-      backgroundColor: 'rgba(255,0,0,0.3)',
-      borderColor: 'red',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    }
-  ];
-  public lineChartLegend = false;
-  public lineChartType = 'line';
-  public lineChartPlugins = [pluginAnnotations];
-
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  public randomize(): void {
-    for (let i = 0; i < this.lineChartData.length; i++) {
-      for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-        this.lineChartData[i].data[j] = this.generateNumber(i);
+        {
+          name: 'Awake',
+          data: [0, 0, 0, 0, 1, 0, 1]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      xaxis: {
+        type: 'datetime',
+        categories: [
+          '2018-09-19T00:00:00.000Z',
+          '2018-09-19T01:30:00.000Z',
+          '2018-09-19T02:30:00.000Z',
+          '2018-09-19T03:30:00.000Z',
+          '2018-09-19T04:30:00.000Z',
+          '2018-09-19T05:30:00.000Z',
+          '2018-09-19T06:30:00.000Z'
+        ]
+      },
+      tooltip: {
+        x: {
+          format: 'dd/MM/yy HH:mm'
+        }
       }
+    };
+  }
+
+  public generateData(baseval, count, yrange) {
+    let i = 0;
+    const series = [];
+    while (i < count) {
+      const x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;
+      const y =
+        Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+      const z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
+
+      series.push([x, y, z]);
+      baseval += 86400000;
+      i++;
     }
-    this.chart.update();
-  }
-
-  private generateNumber(i: number) {
-    return Math.floor((Math.random() * (i < 2 ? 100 : 1000)) + 1);
-  }
-
-  // events
-  public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public hideOne() {
-    const isHidden = this.chart.isDatasetHidden(1);
-    this.chart.hideDataset(1, !isHidden);
-  }
-
-  public pushOne() {
-    this.lineChartData.forEach((x, i) => {
-      const num = this.generateNumber(i);
-      const data: number[] = x.data as number[];
-      data.push(num);
-    });
-    this.lineChartLabels.push(`Label ${this.lineChartLabels.length}`);
-  }
-
-  public changeColor() {
-    this.lineChartColors[2].borderColor = 'green';
-    this.lineChartColors[2].backgroundColor = `rgba(0, 255, 0, 0.3)`;
-  }
-
-  public changeLabel() {
-    this.lineChartLabels[2] = ['1st Line', '2nd Line'];
-    // this.chart.update();
+    return series;
   }
 }

@@ -31,6 +31,7 @@
               "./node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": [
+              "node_modules/apexcharts/dist/apexcharts.min.js"
             ],
             "es5BrowserSupport": true
           },

@@ -1,9 +1,14 @@
-<div class="d-block">
-  <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
-          [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)"></canvas>
-</div>
-<div class="divider"></div>
-<div class="text-center">
-  <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [dataLabels]="chartOptions.dataLabels"
+    [grid]="chartOptions.grid"
+    [stroke]="chartOptions.stroke"
+    [title]="chartOptions.title"
+    [labels]="chartOptions.labels"
+    [annotations]="chartOptions.annotations"
+  ></apx-chart>
 </div>
