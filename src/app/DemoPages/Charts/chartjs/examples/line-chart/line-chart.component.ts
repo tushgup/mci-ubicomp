@@ -38,15 +38,18 @@ export class LineChartComponent {
           data: [0, 0, 0, 0, 1, 0, 1]
         }
       ],
+      stroke: {
+        show: true,
+        lineCap: 'butt',
+        width: 2,
+        curve: 'stepline'
+      },
       chart: {
         height: 350,
         type: 'area'
       },
       dataLabels: {
         enabled: false
-      },
-      stroke: {
-        curve: 'smooth'
       },
       xaxis: {
         type: 'datetime',
