@@ -39,9 +39,6 @@ export class LineChartComponent {
         }
       ],
       stroke: {
-        show: true,
-        lineCap: 'butt',
-        width: 2,
         curve: 'stepline'
       },
       chart: {
@@ -49,7 +46,8 @@ export class LineChartComponent {
         type: 'area'
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
+        enabledOnSeries: undefined
       },
       xaxis: {
         type: 'datetime',
@@ -62,12 +60,12 @@ export class LineChartComponent {
           '2018-09-19T05:30:00.000Z',
           '2018-09-19T06:30:00.000Z'
         ]
-      },
-      tooltip: {
-        x: {
-          format: 'dd/MM/yy HH:mm'
-        }
       }
+      // tooltip: {
+      //   x: {
+      //     format: 'dd/MM/yy HH:mm'
+      //   }
+      // }
     };
   }
 
