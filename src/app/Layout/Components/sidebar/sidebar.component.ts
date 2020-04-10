@@ -9,6 +9,9 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent implements OnInit {
+
+  time = new Date();
+  timer;
   public extraParameter: any;
 
   constructor(public globals: ThemeOptions, private activatedRoute: ActivatedRoute) {
@@ -30,6 +33,9 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.timer = setInterval(() => {
+      this.time = new Date();
+    }, 1000);
     setTimeout(() => {
       this.innerWidth = window.innerWidth;
       if (this.innerWidth < 1200) {

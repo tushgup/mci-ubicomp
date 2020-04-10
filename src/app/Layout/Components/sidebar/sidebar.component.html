@@ -1,21 +1,12 @@
 <div [class]="'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme" (mouseover)="sidebarHover()"
      (mouseout)="sidebarHover()">
   <div class="app-header__logo">
-    <!-- <div class="logo-src"></div> -->
-    <h4>3:25pm</h4> 
-    <h4>Friday, March 5</h4> 
+    <h3>{{ time | date: 'hh:mm a' }}</h3> 
+    <h5>{{ time | date:'fullDate' }}</h5> 
     <h3 style="margin-top: 24px"> Good afternoon, Elena</h3>
-    <!-- <div class="header__pane ml-auto">
-      <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
-              [ngClass]="{'is-active' : globals.toggleSidebar}" (click)="toggleSidebar()">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </div> -->
   </div>
   <div class="app-sidebar-content">
-    <!-- <div class="sidebarBlock">
+    <div class="sidebarBlock">
       <div style="display: flex; flex-direction: row; align-self: center;">
         <img src="assets/images/icons/dailyIcons.svg" />
         <h5 style="margin-left: 8px; margin-bottom: 0;">DAILY TRENDS</h5>
@@ -79,9 +70,9 @@
         <h5 style="margin-left: 8px; margin-bottom: 0; align-self: center;"> Bob Dylan - Tangled Up</h5>
         <img class="icon" src="assets/images/icons/Pause.svg" />
       </div>
-    </div> -->
+    </div>
     
-    <div class="app-sidebar-scroll">
+    <!-- <div class="app-sidebar-scroll">
       <perfect-scrollbar [autoPropagation]="true">
         <div class="v-sidebar-menu vsm-default">
           <div class="vsm-list">
@@ -303,6 +294,6 @@
           </div>
         </div>
       </perfect-scrollbar>
-    </div>
+    </div> -->
   </div>
 </div>
