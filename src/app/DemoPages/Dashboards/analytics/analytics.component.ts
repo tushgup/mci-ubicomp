@@ -7,6 +7,7 @@ import {Color} from 'ng2-charts/ng2-charts';
 })
 export class AnalyticsComponent implements OnInit {
 
+
   heading = '9:59 AM, 10 March 2020';
   subheading = 'Great going, Jerry! Keep it up.';
   icon = 'pe-7s-like icon-gradient bg-warm-flame';

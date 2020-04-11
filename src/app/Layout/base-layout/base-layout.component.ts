@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {select} from '@angular-redux/store';
 import {Observable} from 'rxjs';
 import {ConfigActions} from '../../ThemeOptions/store/config.actions';
@@ -34,11 +34,14 @@ import {animate, query, style, transition, trigger} from '@angular/animations';
   ]
 })
 
-export class BaseLayoutComponent {
+export class BaseLayoutComponent implements OnInit {
 
   @select('config') public config$: Observable<any>;
 
   constructor(public globals: ThemeOptions, public configActions: ConfigActions) {
+  }
+
+  ngOnInit() {
   }
 
   toggleSidebarMobile() {

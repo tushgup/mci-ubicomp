@@ -28,11 +28,12 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/font-awesome/scss/font-awesome.scss"
+              "./node_modules/font-awesome/scss/font-awesome.scss",
+              "./node_modules/intro.js/introjs.css"
             ],
             "scripts": [
-              "node_modules/apexcharts/dist/apexcharts.min.js",
-              "node_modules/shepherd.js/dist/css/shepherd.css"
+              "./node_modules/apexcharts/dist/apexcharts.min.js",
+              "./node_modules/intro.js/intro.js"
             ],
             "es5BrowserSupport": true
           },
