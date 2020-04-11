@@ -25,6 +25,7 @@
     "@ngx-loading-bar/core": "^4.2.0",
     "@ngx-loading-bar/router": "^4.2.0",
     "angular-font-awesome": "^3.1.2",
+    "angular-shepherd": "^0.6.0",
     "animate-sass": "^0.8.2",
     "apexcharts": "^3.18.1",
     "bootstrap": "4.3.1",

@@ -12,6 +12,13 @@ export class SidebarComponent implements OnInit {
 
   time = new Date();
   timer;
+
+  jokesArray = ['I bought myself some glasses. My observational comedy improved.',
+    'I am on a whiskey diet. So far I have lost three days',
+    'How does the moon cut its hair? Eclipses it!',
+    'I ate a clock yesterday, it was very time-consuming.'];
+  jokeIndex = 0;
+
   public extraParameter: any;
 
   constructor(public globals: ThemeOptions, private activatedRoute: ActivatedRoute) {
@@ -44,7 +51,14 @@ export class SidebarComponent implements OnInit {
     });
 
     this.extraParameter = this.activatedRoute.snapshot.firstChild.data.extraParameter;
+  }
 
+  jokeButtonPress() {
+    if ( this.jokeIndex > 2 ) {
+      this.jokeIndex = 0;
+    } else {
+      this.jokeIndex++;
+    }
   }
 
   @HostListener('window:resize', ['$event'])

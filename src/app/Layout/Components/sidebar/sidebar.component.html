@@ -51,7 +51,7 @@
         <h5 style="margin-left: 8px; margin-bottom: 0;"> DAILY HUMOUR</h5>
       </div>
 
-      <h5 style="margin-top: 16px;">I’m on a whiskey diet, so far I’ve lost three days!</h5>
+      <h5 class="joke">{{jokesArray[jokeIndex]}}</h5>
       <button style="background: #275784;
       border: 1px solid #FFFFFF;
       box-sizing: border-box;
@@ -59,7 +59,8 @@
       border-radius: 10px;
       padding: 8px 16px 8px 16px;
       color: white;
-      font-size: 16px;">
+      font-size: 16px;"
+      (click)="jokeButtonPress()">
       NEXT JOKE
       </button>
     </div>
