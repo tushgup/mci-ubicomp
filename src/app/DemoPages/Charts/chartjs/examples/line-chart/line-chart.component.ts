@@ -5,9 +5,11 @@ import {
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
+  ApexYAxis,
   ApexDataLabels,
   ApexTooltip,
-  ApexStroke
+  ApexStroke,
+  ApexFill
 } from 'ng-apexcharts';
 
 interface ChartOptions {
@@ -17,6 +19,9 @@ interface ChartOptions {
   stroke: ApexStroke;
   tooltip: ApexTooltip;
   dataLabels: ApexDataLabels;
+  colors: string[];
+  yaxis: ApexYAxis;
+  fill: ApexFill;
 }
 @Component({
   selector: 'app-line-chart',
@@ -31,57 +36,60 @@ export class LineChartComponent {
       series: [
         {
           name: 'Sleep',
-          data: [1, 1, 1, 1, 0, 1, 0]
+          data: [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0]
         },
         {
           name: 'Awake',
-          data: [0, 0, 0, 0, 1, 0, 1]
+          data: [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1]
         }
       ],
+      colors: ['#CAE3AE', '#83B054'],
+      fill: {
+        type: 'solid',
+        gradient: {
+          shadeIntensity: 1,
+          opacityFrom: 0.7,
+          opacityTo: 0.9,
+          stops: [0, 90, 100]
+        }
+      },
       stroke: {
         curve: 'stepline'
       },
       chart: {
-        height: 350,
+        height: 270,
         type: 'area'
       },
       dataLabels: {
         enabled: false,
-        enabledOnSeries: undefined
+        enabledOnSeries: undefined,
       },
       xaxis: {
         type: 'datetime',
         categories: [
-          '2018-09-19T00:00:00.000Z',
-          '2018-09-19T01:30:00.000Z',
-          '2018-09-19T02:30:00.000Z',
-          '2018-09-19T03:30:00.000Z',
-          '2018-09-19T04:30:00.000Z',
-          '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z'
+          '2020-04-12T00:00:00.000Z',
+          '2020-04-12T00:30:00.000Z',
+          '2020-04-12T01:00:00.000Z',
+          '2020-04-12T01:30:00.000Z',
+          '2020-04-12T02:00:00.000Z',
+          '2020-04-12T02:30:00.000Z',
+          '2020-04-12T03:00:00.000Z',
+          '2020-04-12T03:30:00.000Z',
+          '2020-04-12T04:00:00.000Z',
+          '2020-04-12T04:30:00.000Z',
+          '2020-04-12T05:00:00.000Z',
+          '2020-04-12T05:30:00.000Z',
+          '2020-04-12T06:00:00.000Z',
+          '2020-04-12T06:30:00.000Z',
+          '2020-04-12T07:00:00.000Z',
+          '2020-04-12T07:30:00.000Z',
+          '2020-04-12T08:00:00.000Z',
+          '2020-04-12T08:30:00.000Z',
         ]
+      },
+      yaxis: {
+       show: false
       }
-      // tooltip: {
-      //   x: {
-      //     format: 'dd/MM/yy HH:mm'
-      //   }
-      // }
     };
-  }
-
-  public generateData(baseval, count, yrange) {
-    let i = 0;
-    const series = [];
-    while (i < count) {
-      const x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;
-      const y =
-        Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
-      const z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
-
-      series.push([x, y, z]);
-      baseval += 86400000;
-      i++;
-    }
-    return series;
   }
 }

@@ -23,6 +23,7 @@ interface ChartOptions {
   grid: ApexGrid;
   labels: string[];
   stroke: ApexStroke;
+  colors: string[];
   title: ApexTitleSubtitle;
 }
 
@@ -43,22 +44,25 @@ export class DynamicChartComponent  {
         }
       ],
       chart: {
-        height: 350,
-        type: 'line'
+        height: 270,
+        type: 'line',
+        toolbar: {
+          show: false
+        }
       },
       annotations: {
         yaxis: [
           {
             y: 163,
             borderColor: '#3274B1',
-            // borderWidth: 30,
+            borderWidth: 5,
             label: {
               borderColor: '#3274B1',
               style: {
                 color: '#fff',
                 background: '#3274B1'
               },
-              text: 'Baseline'
+              text: 'Baseline Weight'
             }
           }
         ],
@@ -69,6 +73,7 @@ export class DynamicChartComponent  {
       stroke: {
         curve: 'straight'
       },
+      colors: ['#D02B7B'],
       grid: {
         padding: {
           right: 30,

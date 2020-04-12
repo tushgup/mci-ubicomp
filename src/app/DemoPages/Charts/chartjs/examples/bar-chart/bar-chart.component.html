@@ -1,14 +1,13 @@
-<div class="d-block">
-  <canvas baseChart width="250" height="75"
-          [datasets]="barChartData"
-          [labels]="barChartLabels"
-          [options]="barChartOptions"
-          [plugins]="barChartPlugins"
-          [legend]="barChartLegend"
-          [chartType]="barChartType">
-  </canvas>
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [dataLabels]="chartOptions.dataLabels"
+    [plotOptions]="chartOptions.plotOptions"
+    [yaxis]="chartOptions.yaxis"
+    [xaxis]="chartOptions.xaxis"
+    [fill]="chartOptions.fill"
+    [title]="chartOptions.title"
+    [colors]="chartOptions.colors"
+  ></apx-chart>
 </div>
-<!-- <div class="divider"></div>
-<div class="text-center">
-  <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
-</div> -->
