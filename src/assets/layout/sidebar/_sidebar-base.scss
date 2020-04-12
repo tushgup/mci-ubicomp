@@ -47,14 +47,11 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
 
   .app-header__logo {
     flex-direction: column;
-    padding: 0 $layout-spacer-x;
-    // height: $app-header-height;
+    margin: -24px;
+    padding: 24px;
     width: $app-sidebar-width;
     display: flex;
-    // align-items: center;
     transition: width .2s;
-    // flex-shrink: 0;
-    padding: 24px;
     background-image: url('src/assets/images/sidebar/grass.png') !important;
     color: white !important;
   }

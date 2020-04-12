@@ -1,12 +1,13 @@
 <div [class]="'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme" (mouseover)="sidebarHover()"
      (mouseout)="sidebarHover()">
-  <div class="app-header__logo">
-    <h3>{{ time | date: 'hh:mm a' }}</h3> 
-    <h5>{{ time | date:'fullDate' }}</h5> 
-    <h3 style="margin-top: 24px"> Good day, Elena!</h3>
-  </div>
+  
   <div class="app-sidebar-content">
-    <div class="sidebarBlock">
+    <div class="app-header__logo">
+      <h3>{{ time | date: 'hh:mm a' }}</h3> 
+      <h5>{{ time | date:'fullDate' }}</h5> 
+      <h3 style="margin-top: 24px"> Good day, Elena!</h3>
+    </div>
+    <div class="sidebarBlock mt-5">
       <div style="display: flex; flex-direction: row; align-self: center;">
         <img src="assets/images/icons/dailyIcons.svg" />
         <h5 style="margin-left: 8px; margin-bottom: 0;">DAILY TRENDS</h5>
