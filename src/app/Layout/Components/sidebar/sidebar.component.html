@@ -2,78 +2,84 @@
      (mouseout)="sidebarHover()">
   
   <div class="app-sidebar-content">
-    <div class="app-header__logo">
+    <div class="bgHeader">
       <h3>{{ time | date: 'hh:mm a' }}</h3> 
       <h5>{{ time | date:'fullDate' }}</h5> 
       <h3 style="margin-top: 24px"> Good day, Elena!</h3>
     </div>
-    <div class="sidebarBlock mt-5">
-      <div style="display: flex; flex-direction: row; align-self: center;">
-        <img src="assets/images/icons/dailyIcons.svg" />
-        <h5 style="margin-left: 8px; margin-bottom: 0;">DAILY TRENDS</h5>
-      </div>
-      
-      <div class="dailyTrendBox">
-        <img src="assets/images/icons/ActivityIcon.svg" />
-        <div style="flex-direction: column; align-self: center;">
-          <p style="color: #DB571A; font-weight: 700;">Activity +10%</p> 
-          <p style="font-weight: bold;">Bedroom</p>
-        </div>
-      </div>
 
-      <div class="dailyTrendBox">
-        <img src="assets/images/icons/Weight.svg" />
-        <div style="flex-direction: column; align-self: center;">
-          <p style="color: #D02B67; font-weight: 700;">Weight</p> 
-          <p style="font-weight: bold;">147 lbs</p>
+    <div class="app-sidebar-scroll">
+      <perfect-scrollbar [autoPropagation]="true">
+        <div class="sidebarBlock mt-5">
+          <div style="display: flex; flex-direction: row; align-self: center;">
+            <img src="assets/images/icons/dailyIcons.svg" />
+            <h5 style="margin-left: 8px; margin-bottom: 0;">DAILY TRENDS</h5>
+          </div>
+          
+          <div class="dailyTrendBox">
+            <img src="assets/images/icons/ActivityIcon.svg" />
+            <div style="flex-direction: column; align-self: center;">
+              <p style="color: #DB571A; font-weight: 700;">Activity +10%</p> 
+              <p style="font-weight: bold;">Bedroom</p>
+            </div>
+          </div>
+    
+          <div class="dailyTrendBox">
+            <img src="assets/images/icons/Weight.svg" />
+            <div style="flex-direction: column; align-self: center;">
+              <p style="color: #D02B67; font-weight: 700;">Weight</p> 
+              <p style="font-weight: bold;">147 lbs</p>
+            </div>
+          </div>
+    
+          <div class="dailyTrendBox">
+            <img src="assets/images/icons/Medicine.svg" />
+            <div style="flex-direction: column; align-self: center;">
+              <p style="color: #3274B1; font-weight: 700;">Medicines</p> 
+              <p style="font-weight: bold;">2/3</p>
+            </div>
+          </div>
+    
+          <div class="dailyTrendBox">
+            <img src="assets/images/icons/Sleep.svg" />
+            <div style="flex-direction: column; align-self: center;">
+              <p style="color: #608C32; font-weight: 700;">Sleep +10%</p> 
+              <p style="font-weight: bold;">6 hours</p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="dailyTrendBox">
-        <img src="assets/images/icons/Medicine.svg" />
-        <div style="flex-direction: column; align-self: center;">
-          <p style="color: #3274B1; font-weight: 700;">Medicines</p> 
-          <p style="font-weight: bold;">2/3</p>
+    
+        <div class="sidebarBlock mt-3">
+          <div style="display: flex; flex-direction: row; align-self: center;">
+            <img src="assets/images/icons/Humour.svg" />
+            <h5 style="margin-left: 8px; margin-bottom: 0;"> DAILY HUMOUR</h5>
+          </div>
+    
+          <h5 class="joke">{{jokesArray[jokeIndex]}}</h5>
+          <button style="background: #275784;
+          border: 1px solid #FFFFFF;
+          box-sizing: border-box;
+          margin: 8px 0 8px 0;
+          border-radius: 10px;
+          padding: 8px 16px 8px 16px;
+          color: white;
+          font-size: 16px;
+          cursor:pointer;"
+          (click)="jokeButtonPress()">
+          NEXT JOKE
+          </button>
         </div>
-      </div>
-
-      <div class="dailyTrendBox">
-        <img src="assets/images/icons/Sleep.svg" />
-        <div style="flex-direction: column; align-self: center;">
-          <p style="color: #608C32; font-weight: 700;">Sleep +10%</p> 
-          <p style="font-weight: bold;">6 hours</p>
+    
+        <div class="sidebarBlock mt-3">
+          <div style="display: flex; flex-direction: row; align-self: center;">
+            <img class="icon" src="assets/images/icons/AudioTrack.svg" />
+            <h5 style="margin-left: 8px; margin-bottom: 0; align-self: center;"> Bob Dylan - Tangled Up</h5>
+            <img class="icon" src="assets/images/icons/Pause.svg" />
+          </div>
         </div>
-      </div>
+      </perfect-scrollbar>
     </div>
-
-    <div class="sidebarBlock">
-      <div style="display: flex; flex-direction: row; align-self: center;">
-        <img src="assets/images/icons/Humour.svg" />
-        <h5 style="margin-left: 8px; margin-bottom: 0;"> DAILY HUMOUR</h5>
-      </div>
-
-      <h5 class="joke">{{jokesArray[jokeIndex]}}</h5>
-      <button style="background: #275784;
-      border: 1px solid #FFFFFF;
-      box-sizing: border-box;
-      margin: 8px 0 8px 0;
-      border-radius: 10px;
-      padding: 8px 16px 8px 16px;
-      color: white;
-      font-size: 16px;
-      cursor:pointer;"
-      (click)="jokeButtonPress()">
-      NEXT JOKE
-      </button>
-    </div>
-
-    <div class="sidebarBlock" style="margin-top: 48px;">
-      <div style="display: flex; flex-direction: row; align-self: center;">
-        <img class="icon" src="assets/images/icons/AudioTrack.svg" />
-        <h5 style="margin-left: 8px; margin-bottom: 0; align-self: center;"> Bob Dylan - Tangled Up</h5>
-        <img class="icon" src="assets/images/icons/Pause.svg" />
-      </div>
-    </div>
+    
     
     <!-- <div class="app-sidebar-scroll">
       <perfect-scrollbar [autoPropagation]="true">
