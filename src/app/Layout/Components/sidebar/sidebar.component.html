@@ -1,7 +1,7 @@
 <div [class]="'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme" (mouseover)="sidebarHover()"
      (mouseout)="sidebarHover()">
   
-  <div class="app-sidebar-content">
+  <div class="app-sidebar-content" style="overflow-y: auto;">
     <div class="bgHeader">
       <h3>{{ time | date: 'hh:mm a' }}</h3> 
       <h5>{{ time | date:'fullDate' }}</h5> 
