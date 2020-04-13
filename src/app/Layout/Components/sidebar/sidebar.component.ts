@@ -13,6 +13,8 @@ export class SidebarComponent implements OnInit {
   time = new Date();
   timer;
 
+  musicStatus = false;
+
   jokesArray = ['I bought myself some glasses. My observational comedy improved.',
     'I am on a whiskey diet. So far I have lost three days',
     'How does the moon cut its hair? Eclipses it!',
@@ -59,6 +61,10 @@ export class SidebarComponent implements OnInit {
     } else {
       this.jokeIndex++;
     }
+  }
+
+  changeMusicStatus() {
+    this.musicStatus = !this.musicStatus;
   }
 
   @HostListener('window:resize', ['$event'])

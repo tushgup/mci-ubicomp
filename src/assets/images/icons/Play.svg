@@ -1,0 +1,10 @@
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="18.5" cy="18.5" r="18.5" fill="#275784"/>
+<path d="M27.2772 16.8374L13.8974 10.1419C13.4928 9.93563 13.0096 9.95546 12.6207 10.1935C12.2318 10.4275 12 10.8479 12 11.3001V24.703C12 25.1512 12.2318 25.5716 12.6207 25.8056C12.8328 25.9365 13.0685 26 13.3081 26C13.5124 26 13.7127 25.9524 13.8974 25.8612L27.2811 19.1578C27.7211 18.9396 28 18.4914 28 17.9995C28 17.5077 27.7172 17.0595 27.2772 16.8374Z" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="translate(-0.388889) scale(0.037037)"/>
+</pattern>
+<image id="image0" width="48" height="27" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAbCAYAAAA6aQxyAAAAXUlEQVRYCe3SwQnAQAzEwMv137MDaWEewSD/d7ElPzMzZ/Hcxbt/q3fA3wYzkAEk0AshQI5ngBFiQQYQIMczwAixIAMIkOMZYIRYkAEEyPEMMEIsyAAC5HgGGCEWvE9vBDIRc6cwAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
