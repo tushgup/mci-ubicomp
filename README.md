@@ -1,4 +1,4 @@
-### ArchitectUI - Angular 7 Bootstrap 4
+### MCI Health Tracker - CS 7470 Ubiquitous Computing - Georgia Tech (Spring 2020)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
